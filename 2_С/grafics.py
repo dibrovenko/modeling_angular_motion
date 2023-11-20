@@ -68,7 +68,7 @@ def save_and_close_plot(figure, filename):
     plt.close(figure)
 
 
-def start_plot(orbit: Orbit):
+def start_plot(orbit: Orbit, where_save: str):
     # Графики орбитальных элементов
     fig_elements = plt.figure(figsize=(10.5, 7))
     plot_subplot(321, orbit.result_t, orbit.result_a, 'Большая полуось', 't, c', 'a')
@@ -77,9 +77,12 @@ def start_plot(orbit: Orbit):
     plot_subplot(324, orbit.result_t, orbit.result_omega, 'Долгота восходящего узла ', 't, c', 'Ω')
     plot_subplot(325, orbit.result_t, orbit.result_w, 'Аргумент перицентра', 't, c', 'w')
     plot_subplot(326, orbit.result_t, orbit.result_nu, 'Истинная аномалия', 't, c', ' ν')
-    save_and_close_plot(fig_elements, 'result/days_14/result_elements.png')
+    save_and_close_plot(fig_elements, f'result/{where_save}/result_elements.png')
 
     # Cтроим орбиту
-    orbit_plot_plotly(orbit=orbit)  # для моделирования дольше чем день или больше чем 12 оборотов
-    #orbit_plot(orbit=orbit)  # для модели меньше дня
+    if where_save == "days_14":
+        orbit_plot_plotly(orbit=orbit,
+                          where_save="days_14")  # для моделирования дольше чем день или больше чем 12 оборотов
+    elif where_save == "other":
+        orbit_plot(orbit=orbit)  # для модели меньше дня
 

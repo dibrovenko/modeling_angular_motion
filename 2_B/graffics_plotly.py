@@ -105,7 +105,7 @@ def make_list_coords_orbits(orbit: Orbit) -> list:
     return list_coords_orbits
 
 
-def orbit_plot_plotly(orbit: Orbit):
+def orbit_plot_plotly(orbit: Orbit, where_save: str):
     # Создаем графики
     static_figs = static_3d_fig(orbit=orbit)
     list_coords_orbits = make_list_coords_orbits(orbit=orbit)
@@ -172,7 +172,11 @@ def orbit_plot_plotly(orbit: Orbit):
     fig.frames = frames
 
     # Показываем график
-    fig.write_html("result/other/3d_plot.html")
+    if where_save == "days_14":
+        fig.write_html("result/days_14/3d_plot.html")
+    elif where_save == "other":
+        fig.write_html("result/other/3d_plot.html")
+
 
 
 

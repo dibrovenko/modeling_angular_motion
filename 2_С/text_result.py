@@ -4,7 +4,7 @@ import numpy as np
 from classes import Orbit
 
 
-def write_result(orbit: Orbit):
+def write_result(orbit: Orbit, where_save: str):
     # Находим индексы, где значение становится меньше предыдущего
     end_of_circle_indices = np.where(orbit.result_nu < np.roll(orbit.result_nu, 1))[0]
 
@@ -29,7 +29,7 @@ def write_result(orbit: Orbit):
 
 
     # Сохранение таблиц в текстовый файл
-    with open("result/days_14/output.txt", "w") as file:
+    with open(f"result/{where_save}output.txt", "w") as file:
         file.write(f"\nИзменение параметров за {count-1} витков:\n")
         file.write(str(table2))
         file.write("\n\n\n\nПараметры орбиты в начале каждого витка:\n")
