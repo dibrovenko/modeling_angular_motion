@@ -1,0 +1,4 @@
+/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug/CMakeFiles/Gravity.dir
+/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug/CMakeFiles/gravity_ITRF.dir
+/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug/CMakeFiles/rebuild_cache.dir

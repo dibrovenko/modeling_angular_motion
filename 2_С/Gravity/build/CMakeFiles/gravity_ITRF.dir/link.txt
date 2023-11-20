@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libgravity_ITRF.dylib -install_name @rpath/libgravity_ITRF.dylib CMakeFiles/gravity_ITRF.dir/gravity_ITRF.cpp.o  -Wl,-rpath,/opt/homebrew/lib /opt/homebrew/lib/libGeographicLib.26.0.0.dylib 

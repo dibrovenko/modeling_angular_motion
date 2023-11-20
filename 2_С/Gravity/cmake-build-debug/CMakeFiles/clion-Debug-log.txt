@@ -1,0 +1,7 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity" -B "/Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug"
+-- Reading /opt/homebrew/lib/cmake/GeographicLib/geographiclib-config.cmake
+-- GeographicLib configuration, version 2.3
+--   ${GeographicLib_LIBRARIES} set to shared library
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/paveldibrovenko/Desktop/Modeling angular motion/2_С/Gravity/cmake-build-debug
