@@ -24,7 +24,7 @@ orbit = Orbit(a=a, e=e, i=i, omega=omega, w=w, nu=nu, mu=mu, start_datetime=star
 # Вызов метода Рунге-Кутта 4-го порядка
 T = 2 * np.pi * a ** 1.5 / mu ** 0.5  # Период обращения
 end_datetime = datetime(2023, 11, 28, 22, 00)  # Заданные дата и время конца моделирования
-h = 0.1  # Шаг интегрирования по времени
+h = 0.2  # Шаг интегрирования по времени
 n = math.ceil((end_datetime - start_datetime).total_seconds() / h)  # Количество шагов
 n = 2 * math.ceil(T / h)
 
