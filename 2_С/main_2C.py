@@ -39,4 +39,5 @@ write_result(orbit=orbit, where_save="other/")
 # Вычисляем время выполнения
 execution_time = time.time() - start_time
 print(f"Execution time: {execution_time} seconds")
+
 # 4539 секунд для 2 недели
