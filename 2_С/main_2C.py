@@ -26,17 +26,17 @@ T = 2 * np.pi * a ** 1.5 / mu ** 0.5  # Период обращения
 end_datetime = datetime(2023, 11, 28, 22, 00)  # Заданные дата и время конца моделирования
 h = 0.2  # Шаг интегрирования по времени
 n = math.ceil((end_datetime - start_datetime).total_seconds() / h)  # Количество шагов
-n = 2 * math.ceil(T / h)
+#n = 2 * math.ceil(T / h)
 
 runge_kutta_4(f=orbit.vector_function_right_parts, t0=orbit.t0, y0=orbit.y0, h=h, n=n, orbit=orbit)
 
 # строим графики
-start_plot(orbit=orbit, where_save="other")
+start_plot(orbit=orbit, where_save="days_14")
 
 # покажим различия с теорет моделью
-write_result(orbit=orbit, where_save="other/")
+write_result(orbit=orbit, where_save="days_14/")
 
 # Вычисляем время выполнения
 execution_time = time.time() - start_time
 print(f"Execution time: {execution_time} seconds")
-# 910 секунд для 2 недели
+# 4539 секунд для 2 недели

@@ -91,7 +91,7 @@ class Orbit:
 
         :return: NumPy массив, содержащий правые части дифференциальных уравнений задачи двух тел
         """
-        right_parts = self.gravity.get_vector(y[0:3], t=2460000.0)
+        right_parts = self.gravity.get_vector(y[0:3], t=t)
         right_parts[0:3] = y[3:6]
         return right_parts
 
